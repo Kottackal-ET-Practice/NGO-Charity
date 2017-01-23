@@ -1,0 +1,43 @@
+      
+       <div class="panel panel-success" ng-init="controller.selectProject()">
+                <div class="panel-body">
+           <!--        <h1 style="color:#649574" align="center">DONATION DETAILS</h1> -->
+           <center>
+            <div class="well well-sm" style="width: 100%">
+                  <center><h3 style="color:#051E0D" align="center"><b>Donation Details</b></h3></center>
+            </div>
+            </center>
+                </div>
+                <div class="panel-body" align="center">
+                    
+                 <div><img src="/image/{{newPathName}}" height="350" height="350" alt="image/place.jpg"></div>
+
+                 <div>
+                     <h2 style="color:#074F1E; font-family: verdana" align="center">{{project.title}}</h2>
+                 </div>
+                 <h4>{{project.description}}</h4>
+                 <div>
+                  <h5><b>Category: </b>{{project.category}}<b> &nbsp; &nbsp; &nbsp; &nbsp;Total Amount Required: </b>{{project.total}}<b>&nbsp; &nbsp; &nbsp; &nbsp;Per Head Donation:</b>{{project.amount}}
+                          </h5></p>
+                  </div>
+                  <br/>
+                          <h5 style="color:#074F1E"><b>Break-up Costs</b></h5></p>
+                          <table style="width:50%;" class="table">
+                           <th>Option</th>    <th>Percentage</th>
+                                <tr ng-repeat="x in project.option">      
+                                    <td>{{x.name}}</td>
+                                    <td>{{x.percent}} %</td>
+                                </tr>
+                          </table>
+                </div>
+        </div>
+
+        <center>
+        <p ng-if=currentUser.role=='user'> <button class="btn -btn-primary" ng-click="controller.donate(project)">Donate</button> 
+         <p ng-if=currentUser.role=='admin'> <button class="btn -btn-primary" ng-click="controller.edit(project)">Update</button> 
+        <button class="btn -btn-primary" ng-click="controller.closed()">Close</button></p>
+        </center>
+        <div class="row" ng-init="controller.loadimage()">
+            
+        </div>
+            

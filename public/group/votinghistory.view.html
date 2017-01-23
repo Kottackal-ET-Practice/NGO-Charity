@@ -1,0 +1,39 @@
+<!-- 
+        <div class="row" ng-init="controller.viewHistory()">
+            <div class="col-lg-12"><h2>Voting History</h2>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center" ng-repeat="project in projectlist">
+                <img class="img-circle img-responsive img-center" src="image/thankyou.jpg" alt="" >
+                <h3>{{project.Title}}
+                </h3>
+                <div class="jumbotron">
+                <p style="color:blue;"><b><i><mark>Voted for:</mark></b></i></p> 
+                <div ng-repeat="x in project.Payment">
+                <p>{{x.option}}</p>
+                </div>
+                </div>
+            </div>
+
+        </div> -->
+
+
+<div class="container" ng-init="controller.viewHistory()">
+    <div class="well well-sm" style="width: 100%">
+        <strong><center>Voting History</center></strong>
+    </div>
+    <div id="products" class="row list-group row-eq-height" >
+        <div class="item  col-xs-3  col-lg-3" ng-repeat="project in projectlist" >
+        
+            <div class="thumbnail">
+               <img class="group list-group-image" src="image/vote.jpg" class="img-responsive" alt="Generic placeholder thumbnail"/>
+                <div class="caption">
+                <div style="height: 130px;">
+                    <h5 class="group inner list-group-item-heading">
+                       <b>{{project.Title}}</b></h5>
+                    <p class="group inner list-group-item-text row-eq-height">
+                       <div ng-repeat="x in project.Payment">{{x.option}}</div></p>
+                </div>
+            </div>
+    </div>
+</div>
+</div>

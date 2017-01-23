@@ -1,0 +1,62 @@
+<div class="container" ng-init="controller.loadall()">
+      <div class="row">
+        <div class="col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><select ng-model="project.category" class="form-control" ng-change="controller.editProjects(project.category)">
+             <option value="" disabled selected style="display: none;">Choose Category</option>
+               <option value="children">Children</option>
+            <option value="youth">Youth</option>
+            <option value="adult">Adult</option>
+            <option value="old-age">Old-Age</option>
+            </select></li>
+          </ul>
+        </div>
+        <div class="col-md-9  main">
+          <div>
+            <div class="row placeholders">
+              <!-- <div class="col-xs-6 col-sm-3 placeholder col-margin" ng-repeat="project in projectlist">  -->
+<div>
+    <div class="well well-sm">
+        <strong><center>Donate to the following causes</center></strong>
+    </div>
+    <div id="products" class="row list-group" >
+        <div class="item  col-xs-4  col-lg-4" ng-repeat="project in projectlist" >
+            <div class="thumbnail">
+                <a href="#details/{{project._id}}"> <img class="group list-group-image" src="image/give.jpg" class="img-responsive" alt="Generic placeholder thumbnail"/></a>
+                <div class="caption">
+                 <br/>
+                <div  style="height: 85px;">
+                    <h5 class="group inner list-group-item-heading">
+                       <b>{{project.title}}</b></h5>
+                       <br/>
+
+                    <p class="group inner list-group-item-text">
+                      <i>{{ project.description | limitTo: 50 }}{{project.description.length > 20 ? '...' : ''}}</i></p>
+                  </div>
+                  <br/>
+                   <hr style="color: #043140">
+                      
+                       <br/>
+                    <div class="row">
+                        <div class="col-xs-17 col-md-6">
+                            <p class="lead">
+                                Rs. {{project.amount}}</p>
+                        </div>
+
+                        <div class="col-xs-15 col-md-6">
+                            <a class="btn btn-success" href="#details/{{project._id}}">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+    
+    
+<!-- </div> -->

@@ -1,0 +1,10 @@
+<table>
+  <tr>
+    <td><label for="name">Title : </label></td>
+    <td><input type="text" name="name" id="name" ng-model="upload.name" required/></td>
+    <td><label for="file">File : </label></td>
+    <td><input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/pdf, image/*" id="file" ng-model="upload.file" ngf-select ngf-max-size="25MB" required/></td>
+    <td><input type="submit" value="Submit"/></td>
+  </tr>
+</table>
+<button ng-click="controller.register(user)" class="btn btn-primary btn-block">Register</button>

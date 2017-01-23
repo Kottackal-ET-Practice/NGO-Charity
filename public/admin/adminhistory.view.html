@@ -1,0 +1,67 @@
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><select ng-model="project.category" class="form-control" ng-change="controller.editProjects(project.category)">
+             <option value="" disabled selected style="display: none;">Choose Category</option>
+               <option value="children">Children</option>
+            <option value="youth">Youth</option>
+            <option value="adult">Adult</option>
+            <option value="old-age">Old-Age</option>
+            </select></li>
+          </ul>
+        </div>
+        <div class="col-md-8  main">
+          <div class="row">
+            <div class="row placeholders">
+              <div class="col-xs-6 col-sm-3 placeholder col-margin" ng-repeat="project in projectlist">
+                <div class="modal" id="modal-{{project._id}}">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">{{project.title}}</h3>
+                      </div>
+                        <div class="modal-body">
+                       <!--  <center><img src="{{project.url}}" height="150" width="200" align="middle" alt="{{project.category}}"></center> -->
+                          <div><img src="/image/{{newPathName}}" height="200" height="200"></div>
+                          <h4><b>Category</b></h4>
+                          <p>
+                          {{project.category}}</p>
+                          <p>
+                          <h4><b>Description</b></h4></p>
+                          <p>
+                          {{project.description}}</p>
+                          <p>
+                          <h4><b>Total Amount Required</b></h4></p>
+                          <p>
+                          {{project.total}}</p>
+                          <p>
+                          <h4><b>Per Head Donation</b></h4></p>
+                          <p>
+                          {{project.amount}}</p>
+                            <h4><b>Total Donation Recieved</b></h4></p>
+                          <p>
+                          {{project.donation}}</p>
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: {{c}}%;">{{c}}%
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="modal-footer">
+                                              
+                           <button href="" class="btn -btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+              <img src="image/give.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" data-toggle="modal" data-target="#modal-{{project._id}}" ng-click="controller.loadimage(project._id)">
+              <h4>{{project.title}}</h4>
+              </div> 
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<h2><center>Group Profile</center></h2>
+
+<!-- {{currentUser}} -->
+
+
+<label>Group Name</label>
+<input ng-model="group.name" class="form-control" placeholder="groupname">
+</br>
+<label>Select Category</label>
+<select ng-model="group.category" class="form-control">
+	<option value="" disabled selected style="display: none;">Select Category</option>
+	<option value='Institution'>Institution</option>
+	<option value='Industry'>Industry</option>
+	<option value='Other'>Other</option>
+</select>
+</br>
+<button ng-click="controller.creategroup(group)" class="btn btn-primary btn-block">Submit</button>

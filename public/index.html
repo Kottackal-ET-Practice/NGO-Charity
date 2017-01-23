@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html ng-app="WhiteBoardApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>NGO Charity</title>
+  
+  
+    <link href="csss/awesome-bootstrap-theme.css" rel="stylesheet" >
+    <link href="csss/round-about.css" rel="stylesheet">
+    <link href="csss/justified-nav.css" rel="stylesheet">
+    <link href="csss/build.css" rel="stylesheet">
+    <link href="csss/bootstrap.min.css" rel="stylesheet">
+   <!--  <link href="csss/thumb.css" rel="stylesheet"> -->
+    <script src="csss/emulation-modes-warning.js"></script>
+    <script src="csss/jquery.min.js"></script>
+  <!--   <script src="csss/grids.js"></script> -->
+    <script type="text/javascript" src="csss/angular-animate.min.js"></script>
+    <script type="text/javascript" src="csss/bootstrap.min.js"></script>
+
+  	<script src="vendor/angular.min.js"></script>
+  	<script src="vendor/angular-route.min.js"></script>
+    <script src="vendor/ng-file-upload-all.min.js"></script>
+  	<script src="whiteBoardApp.js"></script>
+  	<script src="config.js"></script>
+  	<script src="services/user.service.js"></script>
+
+  	<script type="text/javascript" src="login/login.controller.js"></script>
+  	<script type="text/javascript" src="profile/profile.controller.js"></script>
+  	<script type="text/javascript" src="main/main.controller.js"></script>
+  	<script type="text/javascript" src="register/register.controller.js"></script>
+    <script type="text/javascript" src="addproject/project.controller.js"></script>
+    <script type="text/javascript" src="addproject/option.controller.js"></script>
+    <script type="text/javascript" src="addproject/edit.controller.js"></script>
+    <script type="text/javascript" src="addproject/editt.controller.js"></script>
+    <script type="text/javascript" src="singleuser/donate.controller.js"></script>
+    <script type="text/javascript" src="singleuser/singlehome.controller.js"></script>
+    <script type="text/javascript" src="singleuser/history.controller.js"></script>
+    <script type="text/javascript" src="group/groupprofile.controller.js"></script>
+    <script type="text/javascript" src="group/memberprofile.controller.js"></script>
+    <script type="text/javascript" src="group/viewgroup.controller.js"></script>
+    <script type="text/javascript" src="group/managegroup.controller.js"></script>
+  <!--   <script type="text/javascript" src="group/history.controller.js"></script> -->
+    <script type="text/javascript" src="group/voting.controller.js"></script>
+    <script type="text/javascript" src="group/donate.controller.js"></script>
+    <script type="text/javascript" src="group/payment.controller.js"></script>
+    <script type="text/javascript" src="group/editgroup.controller.js"></script>
+    <script type="text/javascript" src="group/votinghistory.controller.js"></script>
+    <script type="text/javascript" src="viewproject/viewproject.controller.js"></script>
+    <script type="text/javascript" src="viewproject/projectview.controller.js"></script>
+    <script type="text/javascript" src="admin/adminhistory.controller.js"></script>
+    <script type="text/javascript" src="file.controller.js"></script>
+
+    <style type="text/css">
+      .modal-body{
+            padding: 0px; 
+      }
+      .thumb-height{
+            height: 385px;
+      }
+    </style>
+   
+     
+  </head>
+
+  <body ng-controller="MainController as controller">
+    <div class="container">
+       <h3 style="float: right;">{{currentUser.firstname+' '+currentUser.lastname}}</h3>
+        <div class="masthead">
+          <h3 class="text-muted">Charity Application </h3>
+            <nav>
+                <ul class="nav nav-justified">
+            		    <li ng-if="currentUser==null"><a href="#home" class="active">Home</a></li>
+			              <li ng-if="currentUser==null" ><a href="#register">Register</a></li>
+			              <li ng-if="currentUser==null"><a href="#login">Login</a></li>
+                  
+                    <li ng-if=currentUser.role=='admin'><a href="#home" class="active">Home</a></li>
+              			<li ng-if=currentUser.role=='admin'><a href="#profile">Profile</a></li>
+                    <li ng-if=currentUser.role=='admin'><a href="#view">View/Edit</a></li>
+                    <li ng-if=currentUser.role=='admin'><a href="#project">Add Project</a></li>
+                    <li ng-if=currentUser.role=='admin'><a href="#adminhistory">History</a></li>
+
+                    <li ng-if=currentUser.role=='user'><a href="#singlehome" class="active">Home</a></li>
+                    <li ng-if=currentUser.role=='user'><a href="#profile">Profile</a></li>
+                    <li ng-if=currentUser.role=='user'><a href="#donate">Donate</a></li>
+                    <li ng-if=currentUser.role=='user' class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">History</a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#votinghistory">Voting History</a></li>
+                            <li><a href="#history">Donation History</a></li>
+                          </ul>
+                    </li>
+                    <li ng-if=currentUser.role=='user' class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Group</a>
+                            <ul class="dropdown-menu">
+                                  <li><a href="#groupprofile">New Group</a></li>
+                                  <li><a href="#editgroup">Edit Profile</a></li>
+                                  <li><a href="#viewgroup">View Group</a></li>
+                                  <li><a href="#managegroup">Manage Group</a></li>
+                                  <li><a href="#voting">Voting</a></li>
+                                  <li><a href="#payment">Payment</a></li>
+                            </ul>
+                    </li>
+
+                    <li ng-if="currentUser!=null"><a href="#logout" ng-click="controller.loggout()">Logout</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+     <br/>
+
+                    <div ng-view></div> <!-- Injecting pages -->
+
+                       <!-- Site footer -->
+                           <footer class="footer">
+                                <p>&copy; 2016 Kottackal, Inc.</p>
+                           </footer>
+  </div> <!-- /container -->
+
+  </body>
+</html>
+
+
+
+
+

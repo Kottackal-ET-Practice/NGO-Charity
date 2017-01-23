@@ -1,0 +1,87 @@
+  <!-- Team Members Row -->
+  <div >
+        <div class="row" ng-init="controller.viewvote()">
+           <div class="well well-sm" style="width: 95%">
+        <strong><center>Projects to Vote</center></strong>
+    </div>
+            <div class="col-lg-4 col-sm-6 text-center" ng-repeat="project in projectlist">
+        <div class="item  col-xs-12  col-lg-10"  >
+            <div class="thumbnail" >
+         <div class="modal" id="modal-{{project._id}}">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Select Options </h4>
+                      </div>
+                      <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>Choose your preference</h3>
+                </div>
+                <div class="panel-body two-col">
+                        <div class="modal-body" ng-repeat="x in project.option">
+          <div class="col-md-6">
+            
+                     <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="x.option" ng-value="x.name" ng-change="controller.read(x)">{{x.name}}
+                                </label>
+                            </div>
+                        </li>
+                      </ul>
+                    </div>
+               <!--  <div class="panel-footer">
+                    <button type="button" class="btn btn-success btn-sm">
+                        <span class="glyphicon glyphicon-ok"></span>Vote</button>
+                    <button type="button" class="btn btn-primary btn-sm">
+                        View Result</button>
+                </div> -->
+            </div>
+        </div>
+                         <!--  <div class="row">
+                              <div class="col-lg-6">
+                                  <div class="input-group">
+                                        <span>
+                                        <table class="table" style="text-align: left;">
+                                          <tr>
+                                            <td> <input  id="checkbox" type="checkbox" ng-model="x.option" ng-value="x.name" ng-change="controller.read(x)">{{x.name}}</td>
+                                          </tr>
+                                        </table>
+                                           
+                                                                           
+                                        </span>
+                                       
+                                  </div>
+                              </div>
+                             
+                          </div> -->
+
+                       <!-- <input type="checkbox" ng-model="x.option" ng-value="x.name" ng-change="controller.read(x)">{{x.name}} -->
+                        </div>
+                        <div class="modal-footer">
+                  
+                        
+                         <button class="btn -btn-default" ng-click="controller.vote(project)">Vote</button>
+                       
+                           <button href="" class="btn -btn-default" data-dismiss="modal" >Close</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            <img class="img-rounded img-responsive img-center" src="image/give.jpg" alt="" data-toggle="modal" data-target="#modal-{{project._id}}" style="cursor: pointer;">
+                <h5>{{project.title}}
+                    <small style="color: #E42F08;">new**</small>
+                </h5>
+                <p>Category: {{project.category}}</p>
+            </div>
+            <!--   <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" data-toggle="modal" data-target="#modal-{{project.title}}">
+              <h4>{{project.title}}</h4> -->
+              </div> 
+        </div>
+      </div>
+    </div>
+
+

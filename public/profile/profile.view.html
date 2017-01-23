@@ -1,0 +1,59 @@
+  <h2 class="page-header">Edit Profile</h2>
+  <div class="row">
+    <!-- left column -->
+    <div class="col-md-4 col-sm-6 col-xs-12" ng-init="controller.loadimage()">
+      <div class="text-center">
+      <a href="#userfile">  <img src="/image/{{newPathName}}" class="avatar img-circle img-thumbnail" alt="image/profile.jpg"></a>
+        <h5 style="color:#565D77"><b>{{currentUser.firstname}} {{currentUser.lastname}}</b></h5>
+        <h5 style="color:#476A4D"><i>{{currentUser.email}}</i></h5>
+       </div>
+    </div>
+    <!-- edit form column -->
+    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+      <div class="alert alert-info alert-dismissable">
+        <!-- <a class="panel-close close" data-dismiss="alert">×</a>  -->
+        <i class="fa fa-coffee"></i>
+        You can <strong>Edit</strong> the following information. Click "Save Changes" to update.
+      </div>
+      <h3>Personal info</h3>
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-lg-3 control-label">First name:</label>
+          <div class="col-lg-8">
+            <input ng-model="currentUser.firstname" class="form-control" placeholder="firstname" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Last name:</label>
+          <div class="col-lg-8">
+            <input ng-model="currentUser.lastname" class="form-control" placeholder="lastname" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">User name:</label>
+          <div class="col-lg-8">
+            <input ng-model="currentUser.username" class="form-control" placeholder="username" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Password:</label>
+          <div class="col-md-8">
+            <input ng-model="currentUser.password" class="form-control" placeholder="password" type="password" required>
+          </div>
+        </div>
+         <div class="form-group">
+          <label class="col-lg-3 control-label">Email:</label>
+          <div class="col-lg-8">
+            <input ng-model="currentUser.email" class="form-control" placeholder="email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label"></label>
+          <div class="col-md-8">
+          <center> <input class="btn btn-primary" value="Save Changes" type="button" ng-click="controller.updateUser(currentUser)"></center>
+            
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

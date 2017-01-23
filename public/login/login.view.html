@@ -1,0 +1,60 @@
+
+     <div class="container">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel" >
+                    <div class="panel-heading">
+                        <div class="panel-title"><center>Sign In</center></div>
+                       
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                        <form id="loginform" class="form-horizontal" role="form">
+                                    
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input ng-model="user.username" type="text" class="form-control" name="username" value="" placeholder="username" required>                                        
+                                    </div>
+                                
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input ng-model="user.password" type="password" class="form-control" name="password" placeholder="password" required>
+                            </div>
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-tags
+                                        "></i></span>
+                                        <select ng-model="user.role" class="form-control">
+                                                <option value="" disabled selected style="display: none;">role</option>
+                                                <option value='admin'>Admin</option>
+                                                <option value='user'>User</option>
+                                        </select>
+                             </div>
+                            <center>               
+                            <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                        <button ng-click="controller.login(user)" class="btn btn-success">Login</button>
+                                        <a id="btn-fblogin" href="#register" class="btn btn-primary">Register</a>
+
+                                    </div>
+                                </div>
+                            </center>
+
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                            Don't have an account! <i style="color: #0E86BE">Click Register</i>
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>     
+
+
+
+                        </div>                     
+                    </div>  
+        </div>

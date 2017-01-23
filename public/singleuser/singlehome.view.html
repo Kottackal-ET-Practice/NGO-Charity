@@ -1,0 +1,53 @@
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+  <div class="item active" align="center">
+      <img src="image/s6.jpg" alt="..." width="1000" height="1000">
+      <div class="carousel-caption">
+        <!-- <h3>Caption Text</h3> -->
+      </div>
+    </div>
+    <div class="item" align="center">
+      <img src="image/s1.jpg" alt="..." width="1000" height="1000">
+      <div class="carousel-caption">
+       <!--  <h3>Caption Text</h3> -->
+      </div>
+    </div>
+    <div class="item" align="center">
+      <img src="image/s2.jpg" alt="..." width="900" height="900">
+      <div class="carousel-caption">
+       <!--  <h3>Caption Text</h3> -->
+      </div>
+    </div>
+    <div class="item" align="center">
+      <img src="image/s5.jpg" alt="..." width="1000" height="1000">
+      <div class="carousel-caption">
+        <!-- <h3>Caption Text</h3> -->
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div> <!-- Carousel -->
+<script>
+  $('.carousel').carousel({
+    interval: 5000
+  })
+</script>
+<div class="row" ng-init="controller.loadimage()">
+            
+</div>

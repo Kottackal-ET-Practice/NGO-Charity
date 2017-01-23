@@ -1,0 +1,54 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+   <center> <h3 class="panel-title">Add Options</h3></center>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+      <form>
+         <!--   <div class="modal" id="m1">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Upload Image</h3>
+                      </div>
+                        <div class="modal-body">
+                        <p>Click "Upload" to upload an image...</p>
+                        </div>
+                        <div class="modal-footer">
+                           <button class="btn -btn-default" onclick="location.href='#file'" ng-click="" data-dismiss="modal">Upload</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+        -->
+        <div class="form-group">
+        <table class="table">
+          <tr><td>Option Name</td>
+          <td><input type="text" class="form-control" ng-model="project.name" placeholder="Enter option name"></td>
+          </tr>
+         
+          <tr>
+          <td>Percentage</td>
+         <td><input type="number" class="form-control" ng-model="project.percent" placeholder="Enter value between 0 and 100"></td>
+         </tr>
+         <tr>
+           <td></td>
+           <td>Available : {{avail}}</td>
+         </tr>
+         <tr>
+          	<td></td>
+          	<td> <button class="btn btn-primary" ng-click="controller.addOption(project)">Add</button>
+           <button type="submit"  ng-click="controller.closed()" class="btn btn-primary">Close</button></td>
+          </tr>
+         
+        </table>
+       
+       
+      </form>
+</div>
+    </div>
+  </div>
+</div>

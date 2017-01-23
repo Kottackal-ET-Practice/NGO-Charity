@@ -1,0 +1,124 @@
+<!-- <div class="panel panel-default">
+  <div class="panel-heading">
+   <center> <h3 class="panel-title">Add Existing Member</h3></center>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+      <form>
+        <div class="form-group">
+        <table class="table">
+          <tr><td>Enter Member ID</td>
+          <td><input type="text" class="form-control" ng-model="project.id" placeholder="Enter Member ID"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td> <button class="btn btn-primary" ng-click="controller.addexisting(project)">Add</button>
+           <button type="submit" class="btn btn-primary" >Submit</button></td>
+          </tr>
+         
+        </table>  
+      </form>
+</div>
+    </div>
+  </div>
+</div>
+ -->
+
+<!-- <div class="panel panel-default">
+  <div class="panel-heading">
+   <center> <h3 class="panel-title">Add New Member</h3></center>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+      <form>
+        <div class="form-group">
+        <table class="table">
+          <tr><td>First Name</td>
+          <td><input type="text" class="form-control" ng-model="project.name" placeholder="Enter first name"></td>
+          </tr>
+          <tr><td>Last Name</td>
+          <td><input type="text" class="form-control" ng-model="project.lname" placeholder="Enter last name"></td>
+          </tr>
+          <tr>
+          <td>email</td>
+         <td><input type="text" class="form-control" ng-model="project.email" placeholder="Enter email"></td>
+         </tr>
+         <tr>
+          	<td></td>
+          	<td> <button class="btn btn-primary" ng-click="controller.addmember(project)">Add</button>
+           <button class="btn btn-primary" ng-click="controller.closed()">Close</button></td>
+          </tr>
+         
+        </table>
+       
+       
+      </form>
+</div>
+    </div>
+  </div>
+  </div>
+
+<div class="panel panel-default">
+<div class="panel-heading">
+   <center> <h3 class="panel-title">Add Existing Member</h3></center>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+      <form>
+        <div class="form-group">
+        <table class="table">
+          <tr><td>Enter member id</td>
+          <td><input type="text" class="form-control" ng-model="project.memid" placeholder="Member Id"></td>
+           <td> <button class="btn btn-primary" ng-click="controller.addmemberid(project.memid)">Add</button>
+          </tr>
+         
+        </table>
+       
+       
+      </form>
+</div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container-fluid">
+    <section class="container">
+    <div class="container-page">        
+      <div class="col-md-6">
+        <center><h4 class="dark-grey">Add new Member</h4></center>
+        
+        <div class="form-group col-lg-12">
+          <label>Firstname</label>
+          <input type="text" name="" class="form-control" id="" value=""  ng-model="project.name" placeholder="Enter first name">
+        </div>
+        
+        <div class="form-group col-lg-6">
+          <label>Lastname</label>
+          <input type="text" name="" class="form-control" id="" value="" ng-model="project.lname" placeholder="Enter last name">
+        </div>
+                            
+        <div class="form-group col-lg-6">
+          <label>Email Address</label>
+          <input type="" name="" class="form-control" id="" value="" ng-model="project.email" placeholder="Enter email">
+        </div>
+               
+        <center><button type="submit" class="btn btn-primary" ng-click="controller.addmember(project)">Add</button></center>
+          
+    </div>
+    
+      <div class="col-md-6">
+       <center> <h4 class="dark-grey">Add existing member</h4></center>
+        
+        <div class="form-group col-lg-12">
+          <label>Enter Email Id</label>
+          <input type="" name="" class="form-control" id="" value="" ng-model="project.memid" placeholder="Member's EmailId">
+        </div>
+        
+       <center><button type="submit" class="btn btn-primary" ng-click="controller.addmemberid(project.memid)">Add</button></center>
+      </div>
+    </div>
+  </section>
+</div>

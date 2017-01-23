@@ -1,0 +1,57 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+   <center> <h3 class="panel-title">Add new Project</h3></center>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+      <form>
+        <div class="form-group">
+        <table class="table">
+          <tr><td>Project Title</td>
+          <td><input type="text" class="form-control" ng-model="project.title" placeholder="Title" data-ng-trim="false"></td>
+          </tr>
+         
+          <tr>
+          <td>Category</td>
+          <td><select ng-model="project.category" class="form-control">
+          	<option value="" disabled selected style="display: none;">Select Category</option>
+            <option value="children">Children</option>
+            <option value="adult">Adult</option>
+            <option value="old-age">Old-Age</option>
+            <option value="youth">Youth</option>
+            <option value="other">Other</option>
+          </select></td>
+          </tr>
+          <tr>
+          <td> Select Image</td>
+            <td><input type="file" ngf-select name="file" id="file" ng-model="upload.file">
+              <br/></td>
+          </tr>
+          <tr>
+          <td>Description</td>
+          <td><textarea class="form-control" ng-model="project.description" placeholder="Description"></textarea>
+        </td>
+        </tr>
+          <tr>
+          <td>Required Amount</td>
+         <td><input type="text" class="form-control" ng-model="project.total" placeholder="Total amount required"></td>
+         </tr>
+         <tr>
+        <td>Donation Amount</td>
+          <td><input type="text" class="form-control" ng-model="project.amount" placeholder="Per head Donation"></td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+          	<td></td>
+          	<td> <button ng-click="controller.add(project,upload)" class="btn btn-primary">Next</button></td>
+          </tr>
+         
+        </table>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+

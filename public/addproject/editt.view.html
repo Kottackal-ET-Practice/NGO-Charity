@@ -1,0 +1,60 @@
+<h2><center>Edit Project</center></h2>
+</br>
+
+ <div class="row" ng-init="controller.loadimage()"></div>
+<div><center><a href="#file"><img src="/image/{{newPathName}}" height="200" height="200" alt="image/place.jpg"></a>
+<label>Click image to update</label>
+</center></div>
+
+  <tr><td>Project Title</td>
+          <td><input type="text" class="form-control" ng-model="value.title" placeholder="Title"></td>
+          </tr>
+          </br>
+          <tr>
+          <td>Category</td>
+          <td><select ng-model="value.category" class="form-control">
+          	<option value="" disabled selected style="display: none;">Select Category</option>
+            <option value="children">Children</option>
+            <option value="adult">Adult</option>
+            <option value="old-age">Old-Age</option>
+            <option value="youth">Youth</option>
+            <option value="other">Other</option>
+          </select></td>
+          </tr>
+           </br>
+          <tr>
+          <td>Description</td>
+          <td><textarea class="form-control" ng-model="value.description" placeholder="Description"></textarea>
+        </td>
+        </tr>
+         </br>
+          <tr>
+          <td>Required Amount</td>
+         <td><input type="text" class="form-control" ng-model="value.total" placeholder="Total amount required"></td>
+         </tr>
+          </br>
+         <tr>
+        <td>Donation Amount</td>
+          <td><input type="text" class="form-control" ng-model="value.amount" placeholder="Per head Donation"></td>
+          </tr>
+        <!--    </br>
+            <tr><td>Select Option</td>
+          <td><select ng-model="value.opt" class="form-control" ng-change="fill(value.opt)" >
+            <option ng-repeat="projects in value.option">{{projects.name}}</option>
+            </select></td>
+          </tr>
+          </br>
+          <tr><td>Option Name</td>
+          <td><input type="text" class="form-control" ng-model="projects.name" placeholder="Enter option name" ng-value="projectlist2[0].option.name"></td>
+          </tr>
+         </br>
+          <tr>
+          <td>Percentage</td>
+         <td><input type="text" class="form-control" ng-model="projects.percent" placeholder="Enter value between 0 and 100"></td>
+         </tr>
+         </br>
+         </br> -->
+         <center>
+          <button type="submit" class="btn btn-primary" ng-click="controller.editt(value)">Edit</button>
+          <button class="btn btn-primary" >Close</button>
+         </center>
